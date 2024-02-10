@@ -54,4 +54,3 @@ export const allFlashCards = [
     return { ...item, id: getNewId() };
   })
   .sort((a, b) => a.title.localeCompare(b.title));
-console.log(allFlashCards);

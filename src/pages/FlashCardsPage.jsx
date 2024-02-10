@@ -10,7 +10,7 @@ import RadioButton from '../components/RadioButton';
 
 export default function FlashCardsPage() {
   const [allCards, setAllCards] = useState(allFlashCards);
-  const [showTitle, setShowTitle] = useState(true);
+  const [showTitle, setShowTitle] = useState(false);
 
   function handleButtonClick() {
     const shuffledCards = helperShuffleArray(allCards);
@@ -53,7 +53,12 @@ export default function FlashCardsPage() {
         <FlashCards>
           {allCards.map(({ id, title, description }) => {
             return (
-              <FlashCard key={id} title={title} description={description} />
+              <FlashCard
+                key={id}
+                title={title}
+                description={description}
+                showFlashCardTitle={showTitle}
+              />
             );
           })}
         </FlashCards>
