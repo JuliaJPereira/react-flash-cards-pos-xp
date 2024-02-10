@@ -9,10 +9,10 @@ export default function FlashCard({
     // setShowTitle(!showTitle);
     setShowTitle(currentShowTitle => !currentShowTitle);
   };
-  const fontSizeClassName = showTitle ? 'text-xl' : 'text-md';
+  const fontSizeClassName = showTitle ? 'text-xl' : 'text-sm';
   return (
     <div
-      className={`border shadow-lg p-2 w-64 h-32 cursor-pointer
+      className={`border shadow-lg p-2 m-2 w-80 h-48 cursor-pointer
                   flex flex-row items-center justify-center 
                   font-semibold ${fontSizeClassName}`}
       style={{ fontFamily: "'JetBrains Mono', monospace" }}
